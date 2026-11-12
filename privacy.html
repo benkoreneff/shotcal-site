@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ShotCal Privacy Policy</title>
-<meta name="description" content="Privacy policy for ShotCal, a personal macOS menu bar app.">
+<title>Carpe Privacy Policy</title>
+<meta name="description" content="Privacy policy for Carpe, a personal macOS menu bar app.">
 <style>
   :root { color-scheme: light dark; --text: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --link: #0066cc; }
   @media (prefers-color-scheme: dark) { :root { --text: #f5f5f7; --muted: #a1a1a6; --bg: #1d1d1f; --link: #4da3ff; } }
@@ -20,64 +20,99 @@
 </head>
 <body>
 <main>
-  <p><a href="./">ShotCal</a></p>
+  <p><a href="./">Carpe</a></p>
   <h1>Privacy Policy</h1>
-  <p class="muted">Last updated: 10 November 2026</p>
+  <p class="muted">Last updated: 12 November 2026</p>
 
-  <p>ShotCal is a personal macOS menu bar app that turns a screenshot into a
-  Google Calendar event. It runs on your Mac. There is no ShotCal server, and
+  <p>Carpe is a personal macOS menu bar app that turns a screenshot into a
+  calendar event, in Apple Calendar or in Google Calendar. It runs on your Mac. There is no Carpe server, and
   the developer collects, stores and shares no data about you.</p>
 
   <h2>Screenshots</h2>
-  <p>When you press the shortcut and select part of your screen, ShotCal sends
+  <p>When you press the shortcut and select part of your screen, Carpe sends
   that image to the Anthropic API, using your own Anthropic API key, to read
   the event details in it. The image goes from your Mac straight to Anthropic.
-  ShotCal deletes its temporary copy of the image as soon as the capture has
+  Carpe deletes its temporary copy of the image as soon as the capture has
   been processed. Anthropic handles the image under its own terms and
   <a href="https://www.anthropic.com/legal/privacy">privacy policy</a>.</p>
+  <p>If you switch on <em>Ask which calendar every time</em>, the names of your
+  calendars are sent to Anthropic together with the image, so that a calendar
+  can be suggested for the event. Where two calendars have the same name, the
+  name of the account each belongs to is added to tell them apart. Nothing
+  else about your calendars is sent, and with the setting off the names are
+  not sent either.</p>
+
+  <h2>Apple Calendar</h2>
+  <p>If you choose Apple Calendar, Carpe creates events in your Apple Calendar
+  through macOS, which asks for your permission first. Carpe uses that
+  permission only to:</p>
+  <ul>
+    <li>list the calendars that events can be added to, with their names and
+    colours, so that you can choose one,</li>
+    <li>create the events you capture, and</li>
+    <li>delete an event that Carpe created, when you choose to undo it.</li>
+  </ul>
+  <p>Carpe does not read your other events. All of this happens on your Mac:
+  Carpe sends your calendar data to no one. What leaves your Mac is the
+  screenshot, which goes to Anthropic as described above, along with the
+  names of your calendars if you switched that setting on. macOS itself keeps
+  each calendar in sync with the account it belongs to, such as iCloud, in
+  the same way as for an event you add in the Calendar app.</p>
 
   <h2>Google Calendar</h2>
-  <p>If you connect a Google account, ShotCal asks for one permission: to view
-  and edit events on your calendars
-  (<code>https://www.googleapis.com/auth/calendar.events</code>). ShotCal uses
-  it only to:</p>
+  <p>If you connect a Google account, Carpe asks for two permissions:</p>
   <ul>
-    <li>create the events you capture, and</li>
-    <li>delete an event that ShotCal created, when you choose to undo it.</li>
+    <li>to view and edit events on your calendars
+    (<code>https://www.googleapis.com/auth/calendar.events</code>), and</li>
+    <li>to see the list of calendars you are subscribed to
+    (<code>https://www.googleapis.com/auth/calendar.calendarlist.readonly</code>).</li>
   </ul>
-  <p>ShotCal does not read, list, download or change your other events. Event
+  <p>Carpe uses them only to:</p>
+  <ul>
+    <li>list your calendars, with their names and colours, so that you can
+    choose where events go,</li>
+    <li>create the events you capture, and</li>
+    <li>delete an event that Carpe created, when you choose to undo it.</li>
+  </ul>
+  <p>Carpe does not read, list, download or change your other events. Event
   details go from your Mac straight to Google, which handles them under its
   <a href="https://policies.google.com/privacy">privacy policy</a>.</p>
-  <p>ShotCal's use of information received from Google APIs adheres to the
+  <p>Carpe's use of information received from Google APIs adheres to the
   <a href="https://developers.google.com/terms/api-services-user-data-policy">Google
   API Services User Data Policy</a>, including the Limited Use requirements.
-  Data from Google is not transferred to anyone, is not used for advertising,
-  and is not used to train AI models.</p>
+  Data from Google is not used for advertising and is not used to train AI
+  models. It is not transferred to anyone, with one exception that you
+  control: if you switch on <em>Ask which calendar every time</em>, the names
+  of your calendars are sent to Anthropic together with the screenshot, as
+  described under Screenshots.</p>
 
   <h2>What is stored on your Mac</h2>
   <ul>
     <li>In the macOS Keychain: your Anthropic API key, the Google OAuth client
     ID and client secret you entered, and the Google sign-in token.</li>
     <li>In the app's preferences: plain settings such as the model ID, the
-    calendar ID and the keyboard shortcut.</li>
+    calendar service, the calendars you chose and the keyboard shortcut.</li>
     <li>In the macOS system log: short diagnostic entries, for example that a
     capture ran or an error message.</li>
   </ul>
   <p>None of this leaves your Mac, except that the keys and token are sent to
-  Anthropic and Google respectively to authenticate your own requests.</p>
+  Anthropic and Google respectively to authenticate your own requests. Apple
+  Calendar needs no key or token: access is a macOS permission.</p>
 
   <h2>What the developer collects</h2>
-  <p>Nothing. ShotCal has no analytics, no telemetry, no accounts and no
+  <p>Nothing. Carpe has no analytics, no telemetry, no accounts and no
   servers. The developer never receives your screenshots, your calendar data,
   your keys or your tokens.</p>
 
   <h2>Removing access and data</h2>
   <ul>
-    <li>Choose <em>Disconnect</em> in ShotCal's settings to delete the Google
+    <li>Choose <em>Disconnect</em> in Carpe's settings to delete the Google
     sign-in token from your Mac and ask Google to revoke it.</li>
-    <li>You can also remove ShotCal's access at any time at
+    <li>You can also remove Carpe's access at any time at
     <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</li>
-    <li>To remove everything else, delete the ShotCal items in Keychain Access
+    <li>To take away Carpe's access to Apple Calendar, switch Carpe off under
+    <em>System Settings &gt; Privacy &amp; Security &gt; Calendars</em>.</li>
+    <li>To remove everything else, delete the Carpe items in Keychain Access
     and delete the app.</li>
   </ul>
 
